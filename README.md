@@ -1,3 +1,3 @@
 # fishStuff
 
-Wesbos's  React tutorial
+Wesbos's  React for beginners tutorial
