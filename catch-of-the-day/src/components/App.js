@@ -5,11 +5,11 @@ import Inventory from './Inventory';
 
 class App extends React.Component {
   render() {
-    return (
+    return ( 
       <div className="catch-of-the-day">
         <div className="menu">
-           <Header/>
-        </div>
+           <Header tagline="Fresh Seafood Market"/>
+       </div>
         <Order/>
         <Inventory/>
       </div>
