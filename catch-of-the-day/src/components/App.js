@@ -6,6 +6,9 @@ import Inventory from './Inventory';
 import StorePicker from './StorePicker';
 import {BrowserRouter, Miss, Match} from 'react-router';
 
+
+//App injectée dans le dom
+
 class App extends React.Component {
   render() {
     return (
@@ -20,6 +23,8 @@ class App extends React.Component {
   }
 }
 export default App;
+
+// partie router
 
 export class Route extends React.Component {
     render () {
