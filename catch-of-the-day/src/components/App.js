@@ -1,10 +1,8 @@
 import React from 'react';
 import Header from './Header';
 import Order from './Order';
-import NotFound from './NotFound';
 import Inventory from './Inventory';
-import StorePicker from './StorePicker';
-import {BrowserRouter, Miss, Match} from 'react-router';
+
 
 
 //App injectée dans le dom
@@ -24,8 +22,7 @@ class App extends React.Component {
 }
 export default App;
 
-// partie router
-
+/* transfered to its own routing.js file
 export class Route extends React.Component {
     render () {
       return (
@@ -37,5 +34,4 @@ export class Route extends React.Component {
     </div>
   </BrowserRouter>
     )
-  }
-}
+  }*/

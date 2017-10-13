@@ -2,14 +2,16 @@ import React from 'react';
 import {getFunName} from '../helpers';
 
 class StorePicker extends React.Component {
-/* constructor () {
+ constructor () {
    super();
    this.goToStore = this.goToStore.bind(this);
-
- }*/
+ }
   goToStore(e) {
     e.preventDefault();
-       console.log(this.storeInput.value);
+       // grab text from the input via ref
+    const storeId = this.storeInput.value;
+       // transition url from / to /store/:storeId
+    this.context.router.transitionTo(`/store/${storeId}`);
   }
 
   render() {
@@ -23,4 +25,9 @@ class StorePicker extends React.Component {
     )
   }
 }
+
+StorePicker.contextTypes = {
+  router: React.PropTypes.object
+}
+
 export default StorePicker;
