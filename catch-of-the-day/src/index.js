@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { render } from 'react-dom';
-import {Route} from './components/App';
+import Route from './components/Routing';
 import './css/style.css';
 
 
