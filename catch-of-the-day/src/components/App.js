@@ -3,6 +3,7 @@ import Header from './Header';
 import Order from './Order';
 import Inventory from './Inventory';
 import sampleFishes from '../sample-fishes';
+import Fish from './Fish';
 
 
 
@@ -42,6 +43,12 @@ this.setState({fishes})
       <div className="catch-of-the-day">
         <div className="menu">
            <Header tagline="Fresh Seafood Market"/>
+           <ul className="list-of-fishes">
+             {Object
+               .keys(this.state.fishes)
+              .map(key => <Fish key={key} details={this.state.fishes[key]}/>)
+              }
+           </ul>
        </div>
         <Order/>
         <Inventory addFish={this.addFish} loadSamples={this.loadSamples}/>
@@ -50,17 +57,3 @@ this.setState({fishes})
   }
 }
 export default App;
-
-/* transfered to its own routing.js file
-export class Route extends React.Component {
-    render () {
-      return (
-  <BrowserRouter>
-    <div>
-      <Match exactly pattern="/" component={StorePicker} />
-      <Match pattern="/store/:storeId" component={App}/>
-      <Miss component={NotFound}/>
-    </div>
-  </BrowserRouter>
-    )
-  }*/
