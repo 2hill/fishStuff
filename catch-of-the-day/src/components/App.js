@@ -8,6 +8,16 @@ import Inventory from './Inventory';
 //App injectée dans le dom
 
 class App extends React.Component {
+
+  constructor () {
+    super ();
+    this.state = {
+      order:  {},
+      fishes: {}
+    };
+
+  }
+
   render() {
     return (
       <div className="catch-of-the-day">
