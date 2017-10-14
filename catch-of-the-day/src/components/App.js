@@ -11,12 +11,23 @@ class App extends React.Component {
 
   constructor () {
     super ();
+    this.addFish = this.addFish.bind(this);
+    // initial state
     this.state = {
       order:  {},
       fishes: {}
     };
 
   }
+ addFish (fish) {
+// copy our initial state object
+  const fishes = {...this.state.fishes};
+// update/add new fishes
+const timestamp = Date.now();
+fishes[`fish-${timestamp}`] = fish;
+//set state
+this.setState({fishes})
+ }
 
   render() {
     return (
@@ -25,7 +36,7 @@ class App extends React.Component {
            <Header tagline="Fresh Seafood Market"/>
        </div>
         <Order/>
-        <Inventory/>
+        <Inventory addFish={this.addFish}/>
       </div>
     )
   }
