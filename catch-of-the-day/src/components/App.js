@@ -5,12 +5,10 @@ import Inventory from './Inventory';
 import sampleFishes from '../sample-fishes';
 import Fish from './Fish';
 
-
-
 //App injectée dans le dom
 
 class App extends React.Component {
-
+  
   constructor () {
     super ();
     this.addFish = this.addFish.bind(this);
@@ -21,8 +19,8 @@ class App extends React.Component {
       order:  {},
       fishes: {}
     };
-
   }
+  
  addFish (fish) {
 // copy our initial state object
   const fishes = {...this.state.fishes};
@@ -46,7 +44,6 @@ this.setState({fishes})
    order[key] = order[key] + 1 || 1;
    //update state
    this.setState({order})
-
  }
 
   render() {
@@ -60,12 +57,11 @@ this.setState({fishes})
                .map(key => <Fish key={key}
                                  index={key}
                                  details={this.state.fishes[key]}
-                                 addToOrder={this.addToOrder}/>)
-              }
+                                 addToOrder={this.addToOrder}/>)}
            </ul>
        </div>
-        <Order/>
-        <Inventory addFish={this.addFish} loadSamples={this.loadSamples}/>
+       <Order/>
+       <Inventory addFish={this.addFish} loadSamples={this.loadSamples}/>
       </div>
     )
   }
