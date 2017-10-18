@@ -6,6 +6,7 @@ class StorePicker extends React.Component {
    super();
    this.goToStore = this.goToStore.bind(this);
  }
+ 
   goToStore(e) {
     e.preventDefault();
        // grab text from the input via ref
