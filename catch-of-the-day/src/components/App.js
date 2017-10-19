@@ -8,7 +8,7 @@ import Fish from './Fish';
 //App injectée dans le dom
 
 class App extends React.Component {
-  
+
   constructor () {
     super ();
     this.addFish = this.addFish.bind(this);
@@ -20,7 +20,7 @@ class App extends React.Component {
       fishes: {}
     };
   }
-  
+
  addFish (fish) {
 // copy our initial state object
   const fishes = {...this.state.fishes};
