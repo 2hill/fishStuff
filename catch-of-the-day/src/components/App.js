@@ -52,6 +52,7 @@ this.setState({fishes})
         <div className="menu">
            <Header tagline="Fresh Seafood Market"/>
            <ul className="list-of-fishes">
+             { /* object.keys nous permet de boucler les fish via le map */ }
              {Object
                .keys(this.state.fishes)
                .map(key => <Fish key={key}
